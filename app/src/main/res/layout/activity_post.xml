@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Create Tweet"
+            android:textColor="#000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editPostTweetTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/rammetto_one"
+            android:hint="Tweet Title"
+            android:inputType="textPersonName"
+            android:maxLength="30" />
+
+        <EditText
+            android:id="@+id/editPostTweetBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="Enter tweet text. 140 chars max"
+            android:inputType="textPersonName"
+            android:lines="3"
+            android:maxLength="140"
+            android:maxLines="4"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btnSendPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Post"
+            android:onClick="sendPost"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tweet</string>
+    <string name="login_success">Login Success</string>
+    <string name="login_failed">Login failed please try again</string>
+</resources>

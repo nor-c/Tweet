@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:elevation="3dp"
+    card_view:contentPadding="3dp">
+
+    <TableLayout
+        android:id="@+id/background_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center_vertical|center_horizontal"
+        android:visibility="visible">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal|end">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/delete_icon"
+                android:layout_weight=".8"
+                android:gravity="right|center"
+                android:text="Like"
+                android:textColor="#fff"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:id="@+id/delete_icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_weight=".2"
+                android:src="@mipmap/ic_thumb" />
+
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/foreground_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:visibility="visible"
+        android:gravity="center_horizontal">
+
+        <TableRow
+            android:id="@+id/quick_item_rowTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="#"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tweetTitle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".9"
+                android:fontFamily="@font/rammetto_one"
+                android:gravity="start|center_vertical"
+                android:paddingRight="3dp"
+                android:text="Test"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tweetBody"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:gravity="start"
+                android:lines="4"
+                android:maxLines="4"
+                android:paddingRight="3dp"
+                android:text="This is some text"
+                android:textColor="#000"
+                android:textStyle="italic" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tweetLikes"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".9"
+                android:gravity="center_vertical|end"
+                android:paddingLeft="2dp"
+                android:text="Likes 0"
+                android:textColor="#FFFF5722"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                card_view:srcCompat="@drawable/ic_like_blue" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.cardview.widget.CardView>
